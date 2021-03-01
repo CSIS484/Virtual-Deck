@@ -9,3 +9,6 @@ once the instantiation of 52 cards is consistent and I am confident that current
 
 
 build in current state is basically a proof of concept with more structure planned further down the road after milestone 1.
+
+video for milestone 1 https://www.loom.com/share/5a823010b75d44459727878539a46dbc
+
