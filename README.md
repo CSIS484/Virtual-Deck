@@ -12,3 +12,8 @@ build in current state is basically a proof of concept with more structure plann
 
 video for milestone 1 https://www.loom.com/share/5a823010b75d44459727878539a46dbc
 
+
+After milestone 1 it has become rather abundantly clear at least to me that most of the code structure at least the current way I have been defining cards is not going to work. I was able to work out some issues here and there but overall I think it would be more expedient and more will actually get done if I basically completley rework my current build. Unfortunately I have not taken the steps to start on this revamp yet since it basically means starting from scratch.
+
+
+
