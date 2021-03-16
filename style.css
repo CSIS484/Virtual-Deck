@@ -206,3 +206,7 @@
     position: absolute;
     z-index: 51;
   }
+
+  body {
+    background-color: green;
+  }

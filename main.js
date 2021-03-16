@@ -1,69 +1,26 @@
 //Make the DIV element draggable:
 
-// for (var i = 0; i < 4; i++) {
 
-//   for (var j = 0; j < 13; j++) {
+//consolidate all the elements by their classname and put them in one variable
+var draggableElements = document.getElementsByClassName("draggable");
 
-//   dragElement(document.getElementById(ranks[j]+suits[i]));
-//   }
-// }
-dragElement(document.getElementById("CA"));
-dragElement(document.getElementById("C2"));
-dragElement(document.getElementById("C3"));
-dragElement(document.getElementById("C4"));
-dragElement(document.getElementById("C5"));
-dragElement(document.getElementById("C6"));
-dragElement(document.getElementById("C7"));
-dragElement(document.getElementById("C8"));
-dragElement(document.getElementById("C9"));
-dragElement(document.getElementById("C10")); 
-dragElement(document.getElementById("CJ")); 
-dragElement(document.getElementById("CQ"));
-dragElement(document.getElementById("CK"));
-dragElement(document.getElementById("DA")); 
-dragElement(document.getElementById("D2")); 
-dragElement(document.getElementById("D3"));
-dragElement(document.getElementById("D4")); 
-dragElement(document.getElementById("D5")); 
-dragElement(document.getElementById("D6"));
-dragElement(document.getElementById("D7")); 
-dragElement(document.getElementById("D8")); 
-dragElement(document.getElementById("D9"));
-dragElement(document.getElementById("D10")); 
-dragElement(document.getElementById("DJ")); 
-dragElement(document.getElementById("DQ"));
-dragElement(document.getElementById("DK")); 
-dragElement(document.getElementById("HA")); 
-dragElement(document.getElementById("H2")); 
-dragElement(document.getElementById("H3"));
-dragElement(document.getElementById("H4")); 
-dragElement(document.getElementById("H5")); 
-dragElement(document.getElementById("H6"));
-dragElement(document.getElementById("H7")); 
-dragElement(document.getElementById("H8")); 
-dragElement(document.getElementById("H9"));
-dragElement(document.getElementById("H10")); 
-dragElement(document.getElementById("HJ")); 
-dragElement(document.getElementById("HQ"));
-dragElement(document.getElementById("HK"));
-dragElement(document.getElementById("SA")); 
-dragElement(document.getElementById("S2")); 
-dragElement(document.getElementById("S3"));
-dragElement(document.getElementById("S4")); 
-dragElement(document.getElementById("S5")); 
-dragElement(document.getElementById("S6"));
-dragElement(document.getElementById("S7")); 
-dragElement(document.getElementById("S8")); 
-dragElement(document.getElementById("S9"));
-dragElement(document.getElementById("S10")); 
-dragElement(document.getElementById("SJ")); 
-dragElement(document.getElementById("SQ"));
-dragElement(document.getElementById("SK")); 
+
+// loop through and make div elements draggable in the class variable
+for(var i = 0; i < draggableElements.length; i++){
+    dragElement(draggableElements[i]);
+}
+
+//the following functions implement current drag functionality
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
     elmnt.onmousedown = dragMouseDown;
-  
+  }
 
   function dragMouseDown(e) {
     e = e || window.event;
@@ -90,15 +47,17 @@ function dragElement(elmnt) {
   }
 
   function closeDragElement() {
-    /* stop moving when mouse button is released:*/
+    // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
   }
 }
 
+
+
 var CA_image = "face";
     function flip(){
-        var CACard = document.getElementById("CAce");
+        var CAsCard = document.getElementByClass("CAce");
         if(CA_image == 'face'){
         CACard.src="img/back.jpg";
         CA_image = "back";
