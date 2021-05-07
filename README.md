@@ -21,4 +21,21 @@ video for milestone 2 https://www.loom.com/share/19ecc6ca8efc47bdb5a0cf34c3b267f
 
 send me emails with questions if anything appears unclear I would be more than happy to discuss the project/ your thoughts on it
 
--JDH
+
+
+After reworking the the base framework following boilerplates of other card games made using only javascript I ran into some other issues but overall the object was achieved save for one key feature.  It isn't necessarily pretty but for the most part the program functions as originally inteneded.  I believe overall the project is more reliable and could, with some more time and perhaps better understanding of frameworks such as js react or jquery, be a very well put together piece.  
+
+*Due to the recording software I use, I have the final presentation split into two 5 minute videos:
+
+demo and comparison
+part 1:
+
+https://www.loom.com/share/905cffa9d599479bb773f7d509e2aa28
+
+more indepth code explanation
+part 2:
+
+https://www.loom.com/share/f16fd072f7f74d56b0dd89b01c3f95b5
+
+
+
